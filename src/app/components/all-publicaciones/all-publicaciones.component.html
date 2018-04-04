@@ -1,0 +1,17 @@
+<div class="container">
+    <div infiniteScroll [alwaysCallback]="true" [scrollWindow]="true" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
+        <div class="card " *ngFor="let i of array">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator materialboxed" src="https://www.wikihow.com/images_en/thumb/f/fa/Make-a-Good-Tinder-Profile-Step-05.jpg/v4-728px-Make-a-Good-Tinder-Profile-Step-05.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                <p><a href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+    </div>
+</div>

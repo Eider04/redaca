@@ -1,0 +1,64 @@
+<div class="row" style="margin-bottom: 0">
+    <div class="col s2 hide-on-med-and-down">
+        <div class="wrapper ">
+            <app-navbar></app-navbar>
+        </div>
+    </div>
+    <div class="col col s12 m12 l8">
+        <div class="navbar-fixed">
+            <nav class="cyan" style="width: calc(66vw-70px) !important;height: 48px !important; ">
+
+                <div class="nav-wrapper" *ngIf="navbarModel.dinamic">
+
+                </div>
+                <div class="nav-wrapper nav-content white lighten-2 ">
+                    <ul class=" tabs tabs-transparent ">
+                        <li class="tab puntero center" (click)="tab='home' "><a class="active black-text ">Test 1</a></li>
+                        <li class="tab puntero " (click)="tab='imagen' "><a class=" black-text ">Test 2</a></li>
+                        <li class="tab puntero " (click)="tab='video' "><a class="black-text ">Test 3</a></li>
+                        <li class="tab puntero " (click)="tab='audio' "><a class="black-text ">Test 4</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row ">
+            <div class=" col col s12 m12 l9 " id="scrollHome" style="margin-top: 170px;">
+                <div *ngIf="tab=='home' " class="col s12">
+                    <app-all-publicaciones></app-all-publicaciones>
+                </div>
+                <div *ngIf="tab=='imagen' " class="col s12 ">
+                    <app-only-imagen></app-only-imagen>
+                </div>
+                <div *ngIf="tab=='video' " class="col s12 ">
+                    <app-only-videos></app-only-videos>
+                </div>
+                <div *ngIf="tab=='audio' " class="col s12 ">
+                    <app-only-audios></app-only-audios>
+                </div>
+            </div>
+
+            <div class=" col col s12 m12 l3 hide-on-med-and-down main-container">
+                <div class="">
+                    <nav class="white" style="width: 0 !important;">
+
+                        <div class="card " style="height: calc(100vh - 60px); width: 200.66px !important;     margin-top: 95px;">
+                            <div class="white center " style="width: 200.66px !important; ">
+                                <a href=" " class="black-text ">
+                                    <h6 class="black-text " style="display: initial "></h6>
+                                    <!--   <img src=" " alt="UserImage " class="responsive-img "> -->
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col s12 m12 l2 hide-on-med-and-down main-container main-container" style=" height: 100vh; max-height: 100vh;">
+        <app-navbar2></app-navbar2>
+    </div>
+
+</div>

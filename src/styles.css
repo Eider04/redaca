@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    overflow-y: hidden;
+}
+
+#scrollHome {
+    height: 100vh;
+    overflow-y: scroll;
+    /*    background-color: #edf4f5; */
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.main-container {
+    margin-top: 50px !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
