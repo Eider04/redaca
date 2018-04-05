@@ -1,12 +1,12 @@
-<div class="row" style="margin-bottom: 0">
+<div class="row" style="margin-bottom: 0; min-height: 220px; height: 100vh; max-height: 100vh;">
     <div class="col s2 hide-on-med-and-down">
         <div class="wrapper ">
             <app-navbar></app-navbar>
         </div>
     </div>
-    <div class="col col s12 m12 l8">
-        <div class="navbar-fixed">
-            <nav class="cyan" style="width: calc(66vw-70px) !important;height: 48px !important; ">
+    <div class="col col s12 m8 l8" style="height: 100vh; max-height: 100vh; position: relative;">
+        <div class="navbar-fixed" style="height: 96px;">
+            <nav class="cyan" style="height:48px !important; ">
 
                 <div class="nav-wrapper" *ngIf="navbarModel.dinamic">
 
@@ -23,7 +23,7 @@
         </div>
 
         <div class="row ">
-            <div class=" col col s12 m12 l9 " id="scrollHome" style="margin-top: 170px;">
+            <div class=" col col s12 m12 l9 " id="scrollHome">
                 <div *ngIf="tab=='home' " class="col s12">
                     <app-all-publicaciones></app-all-publicaciones>
                 </div>
@@ -38,26 +38,21 @@
                 </div>
             </div>
 
-            <div class=" col col s12 m12 l3 hide-on-med-and-down main-container">
-                <div class="">
-                    <nav class="white" style="width: 0 !important;">
 
-                        <div class="card " style="height: calc(100vh - 60px); width: 200.66px !important;     margin-top: 95px;">
-                            <div class="white center " style="width: 200.66px !important; ">
-                                <a href=" " class="black-text ">
-                                    <h6 class="black-text " style="display: initial "></h6>
-                                    <!--   <img src=" " alt="UserImage " class="responsive-img "> -->
-                                </a>
-                            </div>
-                        </div>
-                    </nav>
+
+            <div class="card  col col s12 m12 l3 hide-on-med-and-down" style="height: calc(100vh - 60px); width: 200.66px !important; margin-top: 0">
+                <div class="white center " style="width: 200.66px !important; ">
+                    <a href=" " class="black-text ">
+                        <h6 class="black-text " style="display: initial "></h6>
+                        <!--   <img src=" " alt="UserImage " class="responsive-img "> -->
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="col s12 m12 l2 hide-on-med-and-down main-container main-container" style=" height: 100vh; max-height: 100vh;">
+    <div class="col s12 m12 l2 hide-on-med-and-down main-container main-container" style=" height: 100vh; max-height: 100vh;display: flex; justify-content: center;justify-items: center; align-items: center;">
         <app-navbar2></app-navbar2>
     </div>
 
