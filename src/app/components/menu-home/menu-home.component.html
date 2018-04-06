@@ -1,0 +1,22 @@
+<div class="nav-wrapper nav-content white lighten-2 ">
+    <ul class=" tabs tabs-transparent ">
+        <li class="tab puntero " (click)="tab='home' "><a class="active black-text ">Test 1</a></li>
+        <li class="tab puntero " (click)="tab='imagen' "><a class=" black-text ">Test 2</a></li>
+        <li class="tab puntero " (click)="tab='video' "><a class="black-text ">Test 3</a></li>
+        <li class="tab puntero " (click)="tab='audio' "><a class="black-text ">Test 4</a></li>
+    </ul>
+</div>
+<div class=" col col s12 m9 l9 " id="scrollHome">
+    <div *ngIf="tab=='home' " class="col s12">
+        <app-all-publicaciones></app-all-publicaciones>
+    </div>
+    <div *ngIf="tab=='imagen' " class="col s12 ">
+        <app-only-imagen></app-only-imagen>
+    </div>
+    <div *ngIf="tab=='video' " class="col s12 ">
+        <app-only-videos></app-only-videos>
+    </div>
+    <div *ngIf="tab=='audio' " class="col s12 ">
+        <app-only-audios></app-only-audios>
+    </div>
+</div>

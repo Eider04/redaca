@@ -2,6 +2,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 //materialize
 import { MaterializeModule } from "angular2-materialize";
@@ -28,7 +29,9 @@ import { APP_ROUTING } from "./app.route";
 import { Model } from "./navbarModel";
 //scroll
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
-import { Navbar2Component } from './components/navbar2/navbar2.component';
+import { Navbar2Component } from "./components/navbar2/navbar2.component";
+import { ServicePublicar } from "./services/ServicePublicaciones";
+import { MenuHomeComponent } from './components/menu-home/menu-home.component';
 
 @NgModule({
   declarations: [
@@ -46,16 +49,18 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
     ComentariosComponent,
     PerfilComponent,
     NavbarComponent,
-    Navbar2Component
+    Navbar2Component,
+    MenuHomeComponent
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
     APP_ROUTING,
     FormsModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    HttpClientModule
   ],
-  providers: [Model],
+  providers: [Model, ServicePublicar],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

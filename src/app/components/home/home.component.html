@@ -1,58 +1,36 @@
 <div class="row" style="margin-bottom: 0; min-height: 220px; height: 100vh; max-height: 100vh;">
-    <div class="col s2 hide-on-med-and-down">
+    <!--  style="height: 100vh; max-height: 100vh; position: relative;"  <div class="navbar-fixed" style="height: 50px !important; width: 20px !important;"> -->
+    <nav class="cyan" style="width: 100vw">
+        <div class="nav-wrapper" *ngIf="navbarModel.dinamic">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class=" col s12 m12 l2  hide-on-med-and-down">
         <div class="wrapper ">
             <app-navbar></app-navbar>
         </div>
     </div>
-    <div class="col col s12 m8 l8" style="height: 100vh; max-height: 100vh; position: relative;">
-        <div class="navbar-fixed" style="height: 96px;">
-            <nav class="cyan" style="height:48px !important; ">
+    <div class="col col s12 m12 l8">
 
-                <div class="nav-wrapper" *ngIf="navbarModel.dinamic">
-
-                </div>
-                <div class="nav-wrapper nav-content white lighten-2 ">
-                    <ul class=" tabs tabs-transparent ">
-                        <li class="tab puntero center" (click)="tab='home' "><a class="active black-text ">Test 1</a></li>
-                        <li class="tab puntero " (click)="tab='imagen' "><a class=" black-text ">Test 2</a></li>
-                        <li class="tab puntero " (click)="tab='video' "><a class="black-text ">Test 3</a></li>
-                        <li class="tab puntero " (click)="tab='audio' "><a class="black-text ">Test 4</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-
-        <div class="row ">
-            <div class=" col col s12 m12 l9 " id="scrollHome">
-                <div *ngIf="tab=='home' " class="col s12">
-                    <app-all-publicaciones></app-all-publicaciones>
-                </div>
-                <div *ngIf="tab=='imagen' " class="col s12 ">
-                    <app-only-imagen></app-only-imagen>
-                </div>
-                <div *ngIf="tab=='video' " class="col s12 ">
-                    <app-only-videos></app-only-videos>
-                </div>
-                <div *ngIf="tab=='audio' " class="col s12 ">
-                    <app-only-audios></app-only-audios>
-                </div>
-            </div>
-
-
-
-            <div class="card  col col s12 m12 l3 hide-on-med-and-down" style="height: calc(100vh - 60px); width: 200.66px !important; margin-top: 0">
-                <div class="white center " style="width: 200.66px !important; ">
-                    <a href=" " class="black-text ">
-                        <h6 class="black-text " style="display: initial "></h6>
-                        <!--   <img src=" " alt="UserImage " class="responsive-img "> -->
-                    </a>
-                </div>
+        <router-outlet></router-outlet>
+        <div class="card  col col s12 m12 l12 " style="height: calc(100vh - 60px);  margin-top: 0">
+            <div class="white center ">
+                <a href=" " class="black-text ">
+                    <h6 class="black-text " style="display: initial "></h6>
+                    <!--   <img src=" " alt="UserImage " class="responsive-img "> -->
+                </a>
             </div>
         </div>
+
     </div>
 
-
-    <div class="col s12 m12 l2 hide-on-med-and-down main-container main-container" style=" height: 100vh; max-height: 100vh;display: flex; justify-content: center;justify-items: center; align-items: center;">
+    <div class="col s12 m12 l2 hide-on-med-and-down " style=" height: 100vh; max-height: 100vh; justify-content: center;justify-items: center; align-items: center;">
         <app-navbar2></app-navbar2>
     </div>
 

@@ -1,8 +1,15 @@
 <div class="container">
+    <div *ngIf="publicar.length===0" class="main-container center">
+        <i class="material-icons circle " style="font-size: 60px">wb_sunny</i>
+        <p>
+            No hay publicaciones disponible.
+        </p>
+
+    </div>
     <div infiniteScroll [alwaysCallback]="true" [scrollWindow]="true" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
-        <div class="card " *ngFor="let i of array">
+        <div class="card " *ngFor="let publicacion of publicar; let i = index ">
             <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator materialboxed" src="https://www.wikihow.com/images_en/thumb/f/fa/Make-a-Good-Tinder-Profile-Step-05.jpg/v4-728px-Make-a-Good-Tinder-Profile-Step-05.jpg">
+                <img class="activator materialboxed" [src]="publicacion.ARCHIVOURL">
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
