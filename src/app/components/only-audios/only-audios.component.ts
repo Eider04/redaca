@@ -8,7 +8,26 @@ import { Model } from "../../navbarModel";
   styleUrls: ["./only-audios.component.css"]
 })
 export class OnlyAudiosComponent implements OnInit {
-  publicar = [];
+  publicar = [
+    {
+      ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    },
+    {
+      ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    },
+    {
+      ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    },
+    {
+      ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    },
+    {
+      ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    },
+    {
+      ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    }
+  ];
   constructor(
     public navbarModel: Model,
     public servicePublicar: ServicePublicar

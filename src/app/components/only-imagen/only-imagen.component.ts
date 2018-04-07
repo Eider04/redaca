@@ -8,7 +8,21 @@ import { ServicePublicar } from "../../services/ServicePublicaciones";
   styleUrls: ["./only-imagen.component.css"]
 })
 export class OnlyImagenComponent implements OnInit {
-  publicar = [];
+  publicar = [
+    {
+      ARCHIVOURL:
+        "https://i.pinimg.com/736x/5d/a0/8d/5da08d24bc4c7d2847ee5dfa1604b114--naruto-shippudden-naruto-pics.jpg"
+    },
+    {
+      ARCHIVOURL:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0xUPhH3XjQVmE1XvGaq1HTDvCbQUIOF_kGwzivtfm7Jl6VCH_"
+    },
+
+    {
+      ARCHIVOURL:
+        "https://i.pinimg.com/736x/5d/a0/8d/5da08d24bc4c7d2847ee5dfa1604b114--naruto-shippudden-naruto-pics.jpg"
+    }
+  ];
   constructor(
     public navbarModel: Model,
     public servicePublicar: ServicePublicar

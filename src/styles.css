@@ -10,6 +10,12 @@ body {
     /*    background-color: #edf4f5; */
 }
 
+.scrollHome2 {
+    height: 100vh;
+    overflow-y: scroll;
+    /*    background-color: #edf4f5; */
+}
+
 .puntero {
     cursor: pointer;
 }
