@@ -31,8 +31,11 @@ import { Model } from "./navbarModel";
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { Navbar2Component } from "./components/navbar2/navbar2.component";
 import { ServicePublicar } from "./services/ServicePublicaciones";
-import { MenuHomeComponent } from './components/menu-home/menu-home.component';
+import { MenuHomeComponent } from "./components/menu-home/menu-home.component";
 
+//carrusel
+import { NgxCarouselModule } from "ngx-carousel";
+import "hammerjs";
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +61,8 @@ import { MenuHomeComponent } from './components/menu-home/menu-home.component';
     APP_ROUTING,
     FormsModule,
     InfiniteScrollModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxCarouselModule
   ],
   providers: [Model, ServicePublicar],
   bootstrap: [AppComponent]

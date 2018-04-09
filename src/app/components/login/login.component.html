@@ -1,65 +1,136 @@
 <nav>
     <div class="nav-wrapper">
         <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
     </div>
 </nav>
 
 <div class="container">
 
-    <!--    <h2 class="header">Horizontal Card</h2> -->
+    <!--    <h2 class="header">Horizontal Card</h2>style="width: inherit;"  margin-left: 180px;-->
 
-    <div class="row">
+    <div class="row scrollHome2">
 
-        <div class="col md-7 lg-7">
-            <div class="card cyan center" style="margin-top: 30vh; ">
-                <h4 class="header white-text">Sesión</h4>
-            </div>
-            <div class="card horizontal" style="width: inherit;">
-                <div class="card-image">
-                    <img style="height: 294px;" src="https://i.pinimg.com/736x/5d/a0/8d/5da08d24bc4c7d2847ee5dfa1604b114--naruto-shippudden-naruto-pics.jpg">
+        <div class="col s12 m7 l7">
+            <div class="row">
+                <div class="center">
+                    <br><br>
+                    <h5>.:RRR:.</h5>
+                    <br><br>
                 </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <form>
-                            <div class="input-field">
-                                <i class="material-icons prefix">account_circle</i>
-                                <input id="icon_prefix" type="text" class="validate">
-                                <label for="icon_prefix">First Name</label>
-                            </div>
-                            <div class="input-field ">
-                                <i class="material-icons prefix">remove_red_eye</i>
-                                <input id="icon_telephone" type="tel" class="validate">
-                                <label for="icon_telephone">Telephone</label>
-                            </div>
-                            <div class="input-field card-action col s12">
-                                <a class="waves-effect cyan cyan-light btn" [routerLink]="['/redaca','home']"><!-- <i class="material-icons right">send</i> -->Iniciar Sesión!</a>
-                            </div>
-                        </form>
+            </div>
+            <div class="row">
+                <div class="card cyan center">
+                    <h4 class="header white-text">Sesión</h4>
+                </div>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img style="height: 294px;" src="https://i.pinimg.com/736x/5d/a0/8d/5da08d24bc4c7d2847ee5dfa1604b114--naruto-shippudden-naruto-pics.jpg">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <form>
+                                <div class="input-field">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="icon_prefix" type="text" class="validate">
+                                    <label for="icon_prefix">Usuario</label>
+                                </div>
+                                <div class="input-field ">
+                                    <i class="material-icons prefix">remove_red_eye</i>
+                                    <input id="icon_telephone" type="password" class="validate">
+                                    <label for="icon_telephone">Contraseña</label>
+                                </div>
+                                <div class="input-field card-action col s12">
+                                    <a class="waves-effect cyan cyan-light btn" [routerLink]="['/redaca','home']"><!-- <i class="material-icons right">send</i> -->Iniciar Sesión!</a>
+                                </div>
+                            </form>
+
+                        </div>
 
                     </div>
-
                 </div>
-
             </div>
         </div>
 
 
-        <div class="col md-5 lg-5">
-            <div class="row">
+        <div class="col s12 m5 l5">
+
+            <div class="card" style="border: 0px; box-shadow: none !important; margin-top:30px">
+
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#info">Bienvenido</a></li>
+                        <li class="tab"><a href="#registro">Registrarme</a></li>
+                    </ul>
+                </div>
+                <div class="card-content white lighten-4">
+                    <div id="info">
+                        <ngx-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)">
+                            <ngx-item NgxCarouselItem>
+                                <h1>A</h1>
+                            </ngx-item>
+                            <ngx-item NgxCarouselItem>
+                                <h1>B</h1>
+                            </ngx-item>
+                            <ngx-item NgxCarouselItem>
+                                <h1>C</h1>
+                            </ngx-item>
+                            <button NgxCarouselPrev class='leftRs'>&lt;</button>
+                            <button NgxCarouselNext class='rightRs'>&gt;</button>
+                        </ngx-carousel>
+                    </div>
+                    <div id="registro">
+                        <form>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                    <label for="first_name">Nombre</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Apellido</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                                    <label for="disabled">Disabled</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="password" type="password" class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12 center">
+                                    <a class="waves-effect teal cyan-light btn " [routerLink]="['/redaca','home']">Solicitar activación</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 
                 <form class="col s10" style="margin-top:80px; margin-left:20px">
                     <div class="row">
                         <div class="input-field col s6">
                             <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                            <label for="first_name">First Name</label>
+                            <label for="first_name">Nombre</label>
                         </div>
                         <div class="input-field col s6">
                             <input id="last_name" type="text" class="validate">
-                            <label for="last_name">Last Name</label>
+                            <label for="last_name">Apellido</label>
                         </div>
                     </div>
                     <div class="row">
@@ -82,8 +153,14 @@
 
                     </div>
 
-                </form>
-            </div>
+                    <div class="row">
+                        <div class="input-field col s12 center">
+                            <a class="waves-effect teal cyan-light btn " [routerLink]="['/redaca','home']">Solicitar activación</a>
+                        </div>
+                    </div>
+
+                </form> -->
+
 
         </div>
     </div>

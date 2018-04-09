@@ -4,7 +4,6 @@
         <p>
             No hay publicaciones disponible.
         </p>
-
     </div>
 
     <div class="card-panel grey lighten-5 z-depth-1">
@@ -19,14 +18,14 @@
     <div infiniteScroll [alwaysCallback]="true" [scrollWindow]="true" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
         <div class="card " *ngFor="let publicacion of publicar; let i = index ">
             <div class="card-image ">
-                <img class="materialboxed" width="650" [src]="publicacion.ARCHIVOURL">
+                <img class="materialboxed" [src]="publicacion.ARCHIVOURL">
             </div>
             <div class="card-content">
                 <a class="card-title dropdown-button waves-effect waves-light grey-text text-darken-4" data-activates="profile-dropdown">Card Title<i class="material-icons right">more_vert</i></a>
 
                 <a style="border-radius: 100px;" class="btn waves-effect waves-light light-blue darken-4" onclick="Materialize.toast('Te gusto esto!!', 4000)"><i class="material-icons">favorite_border</i></a>
                 <a (click)="Comentarios()" class="btn waves-effect waves-light teal btnshowcomentario" style="border-radius: 100px;"><i class="material-icons"> dehaze</i></a>
-                <a class="btn waves-effect waves-light teal btneliminar" style="border-radius: 100px;"><i class="material-icons ">delete</i></a>
+                <a class="btn waves-effect waves-light teal btneliminar " style="border-radius: 100px;"><i class="material-icons ">delete</i></a>
 
                 <ul id="profile-dropdown" class="dropdown-content">
                     <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
