@@ -142,6 +142,16 @@ export class OnlyImagenComponent implements OnInit {
   onScrollDown() {
     console.log("scrolled down!!");
     this.navbarModel.dinamic = false;
+    this.agregar();
+  }
+
+  agregar() {
+    for (let i = 0; i < 20; ++i) {
+      this.publicar.push({
+        ARCHIVOURL:
+          "https://i.pinimg.com/736x/5d/a0/8d/5da08d24bc4c7d2847ee5dfa1604b114--naruto-shippudden-naruto-pics.jpg"
+      });
+    }
   }
 
   onScrollUp() {

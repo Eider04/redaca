@@ -53,6 +53,35 @@ export class OnlyVideosComponent implements OnInit {
       }
     );
   }
+
+  onScrollUp2() {
+    this.navbarModel.dinamic = true;
+    console.log("scrolled up!!");
+  }
+  onScrollDown2() {
+    console.log("scrolled down!!");
+    this.navbarModel.dinamic = false;
+  }
+
+  onScrollDown() {
+    console.log("scrolled down!!");
+    this.navbarModel.dinamic = false;
+    this.agregar();
+  }
+
+  agregar() {
+    for (let i = 0; i < 20; ++i) {
+      this.publicar.push({
+        ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+      });
+    }
+  }
+
+  onScrollUp() {
+    this.navbarModel.dinamic = true;
+    console.log("scrolled up!!");
+  }
+
   Comentarios() {
     Swal({
       width: 800,

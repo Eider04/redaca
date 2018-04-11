@@ -20,5 +20,6 @@ export class MenuHomeComponent implements OnInit {
     this.navbarModel.dinamic = true;
     console.log("scrolled up!!");
   }
+
   ngOnInit() {}
 }
