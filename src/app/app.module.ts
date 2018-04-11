@@ -36,6 +36,14 @@ import { MenuHomeComponent } from "./components/menu-home/menu-home.component";
 //carrusel
 import { NgxCarouselModule } from "ngx-carousel";
 import "hammerjs";
+
+// paginator
+import { NgxPaginationModule } from "ngx-pagination"; // <-- import the module
+
+import { NotasComponent } from "./components/notas/notas.component";
+import { HorariosComponent } from "./components/horarios/horarios.component";
+import { SolicitudRegistroComponent } from "./components/solicitud-registro/solicitud-registro.component";
+import { PreguntasComponent } from './components/preguntas/preguntas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +61,11 @@ import "hammerjs";
     PerfilComponent,
     NavbarComponent,
     Navbar2Component,
-    MenuHomeComponent
+    MenuHomeComponent,
+    NotasComponent,
+    HorariosComponent,
+    SolicitudRegistroComponent,
+    PreguntasComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +74,8 @@ import "hammerjs";
     FormsModule,
     InfiniteScrollModule,
     HttpClientModule,
-    NgxCarouselModule
+    NgxCarouselModule,
+    NgxPaginationModule
   ],
   providers: [Model, ServicePublicar],
   bootstrap: [AppComponent]

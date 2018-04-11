@@ -10,5 +10,15 @@ export class MenuHomeComponent implements OnInit {
   constructor(public navbarModel: Model) {
     this.navbarModel.dinamic = true;
   }
+
+  onScrollDown() {
+    console.log("scrolled down!!");
+    this.navbarModel.dinamic = false;
+  }
+
+  onScrollUp() {
+    this.navbarModel.dinamic = true;
+    console.log("scrolled up!!");
+  }
   ngOnInit() {}
 }

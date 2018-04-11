@@ -6,39 +6,52 @@
         </p>
     </div>
 
-    <div class="card-panel grey lighten-5 z-depth-1">
-        <div class="row valign-wrapper">
-            <div class="col s12">
-                <i class="material-icons circle" style="font-size:40px">person_pin</i>
-                <span>Comparte tus conocimientos</span>
+    <div *ngIf="publicar.length>0">
+        <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s12">
+                    <i class="material-icons circle" style="font-size:40px">person_pin</i>
+                    <span>Comparte tus conocimientos</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div infiniteScroll [alwaysCallback]="true" [scrollWindow]="true" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
-        <div class="card " *ngFor="let publicacion of publicar; let i = index ">
-            <div class="card-image ">
-                <img class="materialboxed" [src]="publicacion.ARCHIVOURL">
-            </div>
-            <div class="card-content">
-                <a class="card-title dropdown-button waves-effect waves-light grey-text text-darken-4" data-activates="profile-dropdown">Card Title<i class="material-icons right">more_vert</i></a>
+        <div infiniteScroll [alwaysCallback]="true" [scrollWindow]="true" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
+            <div class="card " *ngFor="let publicacion of publicar[0]; let i = index ">
+                <div class="card-image " *ngIf="publicacion.TIPOS=='2'">
+                    <img class="materialboxed" [src]="publicacion.ARCHIVOURL">
+                </div>
 
-                <a style="border-radius: 100px;" class="btn waves-effect waves-light light-blue darken-4" onclick="Materialize.toast('Te gusto esto!!', 4000)"><i class="material-icons">favorite_border</i></a>
-                <a (click)="Comentarios()" class="btn waves-effect waves-light teal btnshowcomentario" style="border-radius: 100px;"><i class="material-icons"> dehaze</i></a>
-                <a class="btn waves-effect waves-light teal btneliminar " style="border-radius: 100px;"><i class="material-icons ">delete</i></a>
+                <div class="card-image " *ngIf="publicacion.TIPOS=='3'">
+                    <video class="responsive-video" controls>
+                    <source [src]="publicacion.ARCHIVOURL" type="video/mp4">
+                </video>
+                </div>
+                <div id="audios" *ngIf="publicacion.TIPOS=='4'">
+                    <img src="../../assets/icon/music.png">
+                    <audio class="responsive-video" controls>
+                    <source [src]="publicacion.ARCHIVOURL" type="video/mp4">
+                </audio>
+                </div>
+                <br>
 
-                <ul id="profile-dropdown" class="dropdown-content">
-                    <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
-                    </li>
-                    <li><a href="#"><i class="mdi-action-face-unlock"></i>Salir</a>
-                    </li>
-                </ul>
-            </div>
+                <div *ngIf="publicacion.DESCRIPCION" padding text-justify class="main-container">
+                    <span text-justify>{{publicacion.DESCRIPCION}}</span>
+                </div>
+                <div class="card-content">
+                    <a class="card-title dropdown-button waves-effect waves-light grey-text text-darken-4" data-activates="profile-dropdown">Card Title<i class="material-icons right">more_vert</i></a>
 
-            <div class="card-reveal">
+                    <a style="border-radius: 100px;" class="btn waves-effect waves-light light-blue darken-4" onclick="Materialize.toast('Te gusto esto!!', 4000)"><i class="material-icons">favorite_border</i></a>
+                    <a (click)="Comentarios()" class="btn waves-effect waves-light teal btnshowcomentario" style="border-radius: 100px;"><i class="material-icons"> dehaze</i></a>
+                    <a class="btn waves-effect waves-light teal btneliminar " style="border-radius: 100px;"><i class="material-icons ">delete</i></a>
 
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    <ul id="profile-dropdown" class="dropdown-content">
+                        <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
+                        </li>
+                        <li><a href="#"><i class="mdi-action-face-unlock"></i>Salir</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

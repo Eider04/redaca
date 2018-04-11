@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-contactos',
-  templateUrl: './contactos.component.html',
-  styleUrls: ['./contactos.component.css']
+  selector: "app-contactos",
+  templateUrl: "./contactos.component.html",
+  styleUrls: ["./contactos.component.css"]
 })
 export class ContactosComponent implements OnInit {
+  publicar = [];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

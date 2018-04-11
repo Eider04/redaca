@@ -1,55 +1,99 @@
-<ul class="" style="margin-top: 0;">
-    <li class="user-details cyan darken-2">
-        <div class="row">
-            <div class="col col s4 m4 l4">
-                <img style="margin-top:15px" src="https://www.gcfaprendelibre.org/files/personage/image/11/R_p.png" alt="" class="circle responsive-img valign profile-image">
+<ul class="card center" style="margin: 0; height: 100vh; border: 0px; box-shadow: none !important; ">
+    <li class=" user-details " style="background:linear-gradient(#f1f1f1, white);">
+        <div class="row ">
+            <div class="col col s4 m4 l4 ">
+                <img style="margin-top:20px " src="https://www.gcfaprendelibre.org/files/personage/image/11/R_p.png " alt=" " class="circle responsive-img valign profile-image ">
             </div>
-            <div class="col col s8 m8 l8">
-                <ul id="profile-dropdown" class="dropdown-content">
-                    <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
+            <div class="col col s8 m8 l8 ">
+                <ul id="profile-dropdown " class="dropdown-content ">
+                    <li><a [routerLink]="[ '/redaca', 'home'] ">Home</a>
                     </li>
-                    <li><a href="#"><i class="mdi-action-face-unlock"></i>Salir</a>
+                    <li><a [routerLink]="[ '/redaca', 'publicar'] ">Publicar</a></li>
+
+                    <li><a href="# "><i class="mdi-action-face-unlock "></i>Salir</a>
                     </li>
                 </ul>
-                <a style="margin-top:15px" class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                <a style="margin-top:15px " class="btn-flat dropdown-button waves-effect waves-light black-text profile-btn " href="# " data-activates="profile-dropdown ">John Doe<i class="mdi-navigation-arrow-drop-down right "></i></a>
             </div>
         </div>
     </li>
+    <hr>
+
+    <div class="collection ">
+
+        <a [routerLink]="[ '/redaca', 'home'] " routerLinkActive="active" class="collection-item black-text ">Inicio</a>
+        <a [routerLink]="[ '/redaca', 'mensajes'] " routerLinkActive="active" class="collection-item black-text">Mensajes</a>
+        <a [routerLink]="[ '/redaca', 'notificaciones'] " routerLinkActive="active" class="collection-item black-text">Notificaciones</a>
+        <a [routerLink]="[ '/redaca', 'contactos'] " routerLinkActive="active" class="collection-item black-text">Favoritos</a>
+        <br>
+
+        <a class="collection-item ">Mi espcacio</a>
+
+        <a [routerLink]="[ '/redaca', 'preguntas'] " routerLinkActive="active" class="collection-item black-text">Preguntas</a>
+
+        <a [routerLink]="[ '/redaca', 'registroUsuarios'] " routerLinkActive="active" class="collection-item black-text">Solictud registro</a>
+
+        <a [routerLink]="[ '/redaca', 'horarios'] " routerLinkActive="active" class="collection-item black-text">Horarios</a>
+
+        <a [routerLink]="[ '/redaca', 'notas'] " routerLinkActive="active" class="collection-item black-text">Notas</a>
+
+        <!--         <li class="no-padding collection-item black-text ">
+            <ul class="collapsible collapsible-accordion ">
+                <li class="bold "><a class="collapsible-header "><i class="mdi-action-invert-colors "></i> Administrar</a>
+                    <div class="collapsible-body ">
+                        <ul>
+                            <li><a class="collection-item" [routerLink]="[ '/redaca', 'registroUsuarios'] ">Solictud registro</a>
+                            </li>
+                            <li><a class="collection-item" [routerLink]="[ '/redaca', 'notas'] ">Notas</a>
+                            </li>
+                            <li><a class="collection-item" [routerLink]="[ '/redaca', 'horarios'] ">Horarios</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </li> -->
+
+    </div>
+
+
 </ul>
 
 
-<!-- <div style="max-width: 100vw;">
-    <ul class="side-nav fixed leftside-navigation" style="width: 239px !important; min-height: 220px; height: 100vh; max-height: 100vh;">
-        <li class="user-details cyan darken-2">
-            <div class="row">
-                <div class="col col s4 m4 l4">
-                    <img style="margin-top:15px" src="https://www.gcfaprendelibre.org/files/personage/image/11/R_p.png" alt="" class="circle responsive-img valign profile-image">
+<!-- <div style="max-width: 100vw; " style="background-color:rgb(241, 241, 241);">
+    <ul class="side-nav fixed leftside-navigation " style="width: 239px !important; min-height: 220px; height: 100vh; max-height: 100vh; ">
+        <li class="user-details cyan darken-2 ">
+            <div class="row ">
+                <div class="col col s4 m4 l4 ">
+                    <img style="margin-top:15px " src="https://www.gcfaprendelibre.org/files/personage/image/11/R_p.png " alt=" " class="circle responsive-img valign profile-image ">
                 </div>
-                <div class="col col s8 m8 l8">
-                    <ul id="profile-dropdown" class="dropdown-content">
-                        <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
+                <div class="col col s8 m8 l8 ">
+                    <ul id="profile-dropdown " class="dropdown-content ">
+                        <li><a href="# "><i class="mdi-action-face-unlock "></i> Profile</a>
                         </li>
-                        <li><a href="#"><i class="mdi-action-face-unlock"></i>Salir</a>
+                        <li><a href="# "><i class="mdi-action-face-unlock "></i>Salir</a>
                         </li>
                     </ul>
-                    <a style="margin-top:15px" class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                    <a style="margin-top:15px " class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn " href="# " data-activates="profile-dropdown ">John Doe<i class="mdi-navigation-arrow-drop-down right "></i></a>
                 </div>
             </div>
         </li>
-          <li class="bold"><a href="index.html" class="waves-effect waves-cyan left-align"><i class="material-icons"></i>Home</a>
+          <li class="bold "><a href="index.html " class="waves-effect waves-cyan left-align "><i class="material-icons "></i>Home</a>
         </li>
-        <li class="bold"><a href="app-email.html" class="waves-effect waves-cyan"><i class="mdi-communication-email"></i> Mensajes <span class="new badge">4</span></a>
+        <li class="bold "><a href="app-email.html " class="waves-effect waves-cyan "><i class="mdi-communication-email "></i> Mensajes <span class="new badge ">4</span></a>
         </li>
-        <li class="bold"><a href="app-calendar.html" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i> Notificaciones <span class="new badge">2</span></a>
+        <li class="bold "><a href="app-calendar.html " class="waves-effect waves-cyan "><i class="mdi-editor-insert-invitation "></i> Notificaciones <span class="new badge ">2</span></a>
         </li> 
-        <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-invert-colors"></i> .::.</a>
-                    <div class="collapsible-body">
+        <li class="no-padding ">
+            <ul class="collapsible collapsible-accordion ">
+                <li class="bold "><a class="collapsible-header waves-effect waves-cyan "><i class="mdi-action-invert-colors "></i> .::.</a>
+                    <div class="collapsible-body ">
                         <ul>
-                            <li><a [routerLink]="['/redaca','home']">Home</a>
+                            <li><a [routerLink]="[ '/redaca', 'home'] ">Home</a>
                             </li>
-                            <li><a [routerLink]="['/redaca','publicar']">Publicar</a>
+                            <li><a [routerLink]="[ '/redaca', 'publicar'] ">Publicar</a>
                             </li>
 
                         </ul>

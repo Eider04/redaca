@@ -7,16 +7,8 @@
 
     </div>
 
-    <div class="card-panel grey lighten-5 z-depth-1">
-        <div class="row valign-wrapper">
-            <div class="col s12">
-                <i class="material-icons circle" style="font-size:40px">person_pin</i>
-                <span>Comparte tus conocimientos</span>
-            </div>
-        </div>
-    </div>
 
-    <div infiniteScroll [alwaysCallback]="true" [scrollWindow]="true" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
+    <div>
         <div class="card " *ngFor="let publicacion of publicar; let i = index ">
             <div class="card-image ">
                 <img class="materialboxed" width="650" [src]="publicacion.ARCHIVOURL">

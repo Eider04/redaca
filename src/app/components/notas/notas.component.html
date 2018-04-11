@@ -1,0 +1,23 @@
+<div class="container  with-header">
+    <div class="collection">
+        <div>
+            <a class="collection-header center">
+                <h4>Mis Notas</h4>
+            </a>
+        </div>
+        <hr>
+
+        <div *ngFor="let item of collection | paginate: { itemsPerPage: 3, currentPage: p }">
+            <a class="collection-item puntero">
+                <div>
+                    <span>Tema: Quiz <br> Puntaje: 4.5 <br> Descripcion: Buen trabjo <br> Fecha:24/08/2018
+                </span> <a class="secondary-content"><i class="material-icons">note</i></a></div>
+            </a>
+        </div>
+        <div class="conatiner center">
+            <pagination-controls (pageChange)="p = $event" maxSize="9" directionLinks="true" autoHide="true" previousLabel="Anterior" nextLabel="Siguiente" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" screenReaderCurrentLabel="paginador"></pagination-controls>
+
+        </div>
+
+    </div>
+</div>
