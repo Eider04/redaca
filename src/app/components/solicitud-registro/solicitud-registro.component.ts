@@ -8,11 +8,30 @@ import swal from "sweetalert2";
 export class SolicitudRegistroComponent implements OnInit {
   p: number = 1;
   collection = [];
+  loading = false;
   constructor() {
-    for (var i = 0; i < 100; i++) {
-      this.collection.push(i);
-    }
+    this.agregar();
+  }
+
+  onScrollDown() {
+    console.log("scrolled down!!");
+    this.agregar();
+  }
+
+  agregar() {
+    this.loading = true;
+    setTimeout(() => {
+      for (var i = 0; i < 20; i++) {
+        this.collection.push(i);
+      }
+      this.loading = false;
+    }, 2000);
+
     console.log(this.collection);
+  }
+
+  onScrollUp() {
+    console.log("scrolled up!!");
   }
 
   aprobar() {

@@ -1,31 +1,38 @@
-<div class="container main-container">
+<div class="scrollHome2" infiniteScroll [alwaysCallback]="false " [scrollWindow]="false " [infiniteScrollDistance]="2 " [infiniteScrollUpDistance]="1.5 " [infiniteScrollThrottle]="50 " (scrolled)="onScrollDown() " (scrolledUp)="onScrollUp()">
     <!--     <div *ngIf="publicar.length===0" class="main-container center">
         <i class="material-icons circle " style="font-size: 60px">wb_sunny</i>
         <p>
             No hay Mensajes disponible.
         </p>
     </div> -->
+    <div class="row container main-container ">
 
-    <ul class="collection">
-        <a class="collection-header center">
-            <h4>Mensajes</h4>
-        </a>
-        <hr>
-        <div>
-            <li class="collection-item avatar" *ngFor="let item of collection | paginate: { itemsPerPage: 3, currentPage: p }">
-                <img src="https://www.gcfaprendelibre.org/files/personage/image/11/R_p.png" alt="" class="circle">
-                <span class="title">Jhon Doe</span>
-                <p>Hola <br> 2-30-2018
-                </p>
-                <a href="#!" class="secondary-content"><i class="material-icons">delete</i><i class="material-icons">grade</i></a>
 
-            </li>
-        </div>
-        <br>
-        <div class="conatiner center">
-            <pagination-controls (pageChange)="p = $event" maxSize="9" directionLinks="true" autoHide="true" previousLabel="Anterior" nextLabel="Siguiente" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" screenReaderCurrentLabel="paginador"></pagination-controls>
+        <ul class="collection ">
+            <a class="collection-header center ">
+                <h4>Mensajes</h4>
+            </a>
+            <hr>
+            <div class="col s4 m4 l4">
+                <div *ngFor="let item of collection ">
+                    <li class="collection-item avatar ">
+                        <img src="https://www.gcfaprendelibre.org/files/personage/image/11/R_p.png " alt=" " class="circle ">
+                        <span class="title ">Jhon Doe</span>
+                        <p>Hola <br> 2-30-2018 </p>
+                        <a href="#! " class="secondary-content "><i class="material-icons ">delete</i><i class="material-icons ">grade</i></a>
+                    </li>
+                </div>
+                <div class="center" *ngIf="loading">
+                    <i style="font-size: 40px" [ngClass]="{'fa-1x':!loading,' fa-spin':loading}" class="fa fa-spinner"></i>
+                    <p>Cargando..</p>
+                </div>
+                <br>
+            </div>
+            <div class="card col s8 m8 l8">
+                awfw
+            </div>
+        </ul>
 
-        </div>
-    </ul>
 
+    </div>
 </div>

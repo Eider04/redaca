@@ -1,23 +1,25 @@
-<div class="container  with-header">
-    <div class="collection">
-        <a class="collection-header center">
-            <h4>Solicitud de registro</h4>
-        </a>
-        <hr>
-
-        <div *ngFor="let item of collection | paginate: { itemsPerPage: 3, currentPage: p }">
-            <a class="collection-item puntero" (click)="aprobar()">
-                <div>
-                    <span><i class="material-icons">account_circle</i>Jesus Hurtado <br><i class="material-icons">blur_linear</i> 1452256398 <br> <i class="material-icons">date_range</i>2018-11-01
-                </span> <a (click)="aprobar()" class="secondary-content"><i class="material-icons">send</i></a></div>
+<div class="scrollHome2" infiniteScroll [alwaysCallback]="false " [scrollWindow]="false " [infiniteScrollDistance]="2 " [infiniteScrollUpDistance]="1.5 " [infiniteScrollThrottle]="50 " (scrolled)="onScrollDown() " (scrolledUp)="onScrollUp()">
+    <div class="container  with-header">
+        <div class="collection">
+            <a class="collection-header center">
+                <h4>Solicitud de registro</h4>
             </a>
-        </div>
-        <div class="conatiner center">
-            <pagination-controls (pageChange)="p = $event" maxSize="9" directionLinks="true" autoHide="true" previousLabel="Anterior" nextLabel="Siguiente" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" screenReaderCurrentLabel="paginador"></pagination-controls>
+            <hr>
 
-        </div>
+            <div *ngFor="let item of collection">
+                <a class="collection-item puntero" (click)="aprobar()">
+                    <div>
+                        <span><i class="material-icons">account_circle</i>Jesus Hurtado <br><i class="material-icons">blur_linear</i> 1452256398 <br> <i class="material-icons">date_range</i>2018-11-01
+                </span> <a (click)="aprobar()" class="secondary-content"><i class="material-icons">send</i></a></div>
+                </a>
+            </div>
+            <div class="center">
+                <i style="font-size: 40px" [ngClass]="{'fa-1x':!loading,' fa-spin':loading}" class="fa fa-spinner"></i>
+                <p>Cargando..</p>
+            </div>
 
-        <!--   <a class="collection-item puntero">
+
+            <!--   <a class="collection-item puntero">
             <div>
                 <span><i class="material-icons">account_circle</i>Carlos Lopez <br><i class="material-icons">blur_linear</i> 1452256398 <br> <i class="material-icons">date_range</i>2018-11-01
                 </span> <a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div>
@@ -36,5 +38,6 @@
 
 
         </a> -->
+        </div>
     </div>
 </div>

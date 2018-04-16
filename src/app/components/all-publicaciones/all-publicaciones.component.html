@@ -1,4 +1,4 @@
-<div class="scrollHome2" infiniteScroll [alwaysCallback]="true" [scrollWindow]="false" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
+<div class="scrollHome2" infiniteScroll [alwaysCallback]="false" [scrollWindow]="false" [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
     <div class="container main-container">
         <div *ngIf="publicar.length===0" class="main-container center">
             <i class="material-icons circle " style="font-size: 60px">wb_sunny</i>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card " *ngFor="let publicacion of publicar[0]; let i = index ">
+            <div class="card " *ngFor="let publicacion of publicar; let i = index ">
                 <div class="card-image " *ngIf="publicacion.TIPOS=='2'">
                     <img class="materialboxed" [src]="publicacion.ARCHIVOURL">
                 </div>
@@ -52,6 +52,10 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="center">
+                <i style="font-size: 40px" [ngClass]="{'fa-1x':!loading,' fa-spin':loading}" class="fa fa-spinner"></i>
+                <p>Cargando..</p>
             </div>
         </div>
     </div>

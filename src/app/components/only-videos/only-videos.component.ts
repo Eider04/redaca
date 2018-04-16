@@ -11,6 +11,28 @@ import $ from "jquery";
 export class OnlyVideosComponent implements OnInit {
   publicar = [
     {
+      ARCHIVOURL:
+        "assets/Ingenieria de Requisitos   Captura y analisis de Requisitos - p2 - Tutoriales y mas.mp4"
+    },
+    {
+      ARCHIVOURL:
+        "assets/Ingenieria de Requisitos   Definicion de Requisitos - p3 - Tutoriales y mas.mp4"
+    },
+    {
+      ARCHIVOURL:
+        "assets/Ingeniería de Requisitos   Introducción y Estudio de Factibilidad - p1 - Tutoriales y mas -.mp4"
+    },
+    {
+      ARCHIVOURL:
+        "assets/Ingenieria de Requisitos   Requerimientos de Usuario - p4 - Tutoriales y mas.mp4"
+    },
+    {
+      ARCHIVOURL:
+        "assets/Ingeniería de Requisitos   Validación de requisitos - p5 - Tutoriales y mas.mp4"
+    }
+  ];
+  /*  publicar = [
+    {
       ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
     },
     {
@@ -28,7 +50,7 @@ export class OnlyVideosComponent implements OnInit {
     {
       ARCHIVOURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
     }
-  ];
+  ]; */
   constructor(
     public navbarModel: Model,
     public servicePublicar: ServicePublicar

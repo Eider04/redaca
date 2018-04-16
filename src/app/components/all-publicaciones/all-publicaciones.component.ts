@@ -12,6 +12,7 @@ import $ from "jquery";
 export class AllPublicacionesComponent implements OnInit {
   sum: number = 10;
   array = [];
+  loading = false;
   publicar = [
     /*   {
       ARCHIVOURL:
@@ -34,17 +35,6 @@ export class AllPublicacionesComponent implements OnInit {
     public servicePublicar: ServicePublicar
   ) {
     this.agregar();
-    let url = [{ usuario: "jesus", contrasena: "123", row: "0" }];
-    this.servicePublicar.getpublicaciones(url).subscribe(
-      data => {
-        console.log("8585", data[0]);
-        this.publicar.push(data[0].PUBLICACIONES);
-        console.log("******", this.publicar);
-      },
-      err => {
-        console.log(err);
-      }
-    );
   }
 
   Comentarios() {
@@ -146,9 +136,20 @@ export class AllPublicacionesComponent implements OnInit {
   }
 
   agregar() {
-    for (let i = 0; i < this.sum; ++i) {
-      this.array.push(i);
-    }
+    this.loading = true;
+    let url = [{ usuario: "jesus", contrasena: "123", row: "0" }];
+    this.servicePublicar.getpublicaciones(url).subscribe(
+      (data: any[]) => {
+        console.log("8585", data[0]);
+        this.publicar.push(data[0].PUBLICACIONES[0]);
+        console.log("******", this.publicar);
+        this.loading = false;
+      },
+      err => {
+        this.loading = false;
+        console.log(err);
+      }
+    );
   }
 
   onScrollUp() {

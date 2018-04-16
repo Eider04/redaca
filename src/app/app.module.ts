@@ -43,7 +43,15 @@ import { NgxPaginationModule } from "ngx-pagination"; // <-- import the module
 import { NotasComponent } from "./components/notas/notas.component";
 import { HorariosComponent } from "./components/horarios/horarios.component";
 import { SolicitudRegistroComponent } from "./components/solicitud-registro/solicitud-registro.component";
-import { PreguntasComponent } from './components/preguntas/preguntas.component';
+import { PreguntasComponent } from "./components/preguntas/preguntas.component";
+
+//video
+import { VgCoreModule } from "videogular2/core";
+import { VgControlsModule } from "videogular2/controls";
+import { VgOverlayPlayModule } from "videogular2/overlay-play";
+import { VgBufferingModule } from "videogular2/buffering";
+/* import { SingleMediaPlayer } from "./single-media-player"; */
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +83,11 @@ import { PreguntasComponent } from './components/preguntas/preguntas.component';
     InfiniteScrollModule,
     HttpClientModule,
     NgxCarouselModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
   providers: [Model, ServicePublicar],
   bootstrap: [AppComponent]

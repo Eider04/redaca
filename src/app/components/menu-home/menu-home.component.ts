@@ -9,6 +9,7 @@ export class MenuHomeComponent implements OnInit {
   tab: string;
   constructor(public navbarModel: Model) {
     this.navbarModel.dinamic = true;
+    this.tab = "home";
   }
 
   onScrollDown() {
